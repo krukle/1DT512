@@ -1,3 +1,11 @@
+/**
+ * Group:
+ *  13
+ * Authors: 
+ *  Christoffer Eid (ce223af)
+ *  Olof Enström    (oe222fh)
+ *  Isak Karlsson   (ik222ne)
+ */
 package dv512.group13.task1;
 
 import java.io.BufferedReader;
@@ -6,10 +14,11 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.time.LocalTime;
-import java.util.Date;
 
 /**
- * Pipes
+ * PipeReader.
+ * Opens test-named-pipe in users home directory. 
+ * Reads lines if any. 
  */
 public class PipeReader {
 
