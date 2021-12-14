@@ -1,7 +1,7 @@
 package dv512.group13.task1;
 
-import java.sql.Time;
 import java.time.LocalTime;
+import java.util.Date;
 
 /**
  * Pipes
@@ -9,10 +9,7 @@ import java.time.LocalTime;
 public class Pipes {
 
   public static void main(String[] args) {
-    System.out.println("PID " + ProcessHandle.current() + " " + LocalTime.now() + " Process started");
+    System.out.println(ProcessHandle.current() + " " + LocalTime.now() + "Process started");
   
-    while (true) {
-      
-    }
   }
 }
