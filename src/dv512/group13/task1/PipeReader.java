@@ -23,11 +23,11 @@ public class PipeReader {
         System.out.println(ProcessHandle.current() + " " + LocalTime.now().truncatedTo(ChronoUnit.MILLIS) + " Pipe opened");
         while ((line = pipeReader.readLine()) != null) {
           System.out.println(ProcessHandle.current() + " " + LocalTime.now().truncatedTo(ChronoUnit.MILLIS) + " " + line);
+          Thread.sleep(3000);
         }
         pipeReader.close();
         System.out.println(ProcessHandle.current() + " " + LocalTime.now().truncatedTo(ChronoUnit.MILLIS) + " Pipe closed");
 
-        Thread.sleep(3000);
       } catch (FileNotFoundException e) {
         e.printStackTrace();
         System.out.println("File does not exist.");
