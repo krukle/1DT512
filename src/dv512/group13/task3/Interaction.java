@@ -7,7 +7,8 @@ import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Date;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -30,12 +31,8 @@ public class Interaction {
       e.printStackTrace();
     }
 
-    Date d;
-    
     for (int i = 0; i < 500; i++) {
-      d = new Date(System.currentTimeMillis());
-      String timeStamp = d.toInstant().toString().split("T|Z")[1].replaceAll("[:.]", "-");
-
+      String timeStamp = LocalTime.now().format(DateTimeFormatter.ofPattern("HH-mm-ss-SSS"));
       try {
         File file = new File(path + FileSystems.getDefault().getSeparator() + timeStamp + ".txt");
         file.createNewFile();
