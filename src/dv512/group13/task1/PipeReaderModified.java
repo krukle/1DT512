@@ -11,7 +11,7 @@ import java.time.temporal.ChronoUnit;
 /**
  * Pipes
  */
-public class PipeReader {
+public class PipeReaderModified {
 
   public static void main(String[] args) {
     System.out.println(ProcessHandle.current() + " " + LocalTime.now().truncatedTo(ChronoUnit.MILLIS) + " Process started");
