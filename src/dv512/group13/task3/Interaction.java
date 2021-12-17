@@ -21,7 +21,7 @@ import java.util.concurrent.TimeUnit;
 public class Interaction {
 
   public static void main(String[] args) {
-    Path path = Paths.get(System.getProperty("user.home") + "/test-directory/");
+    Path path = Paths.get("test-directory/");
     try {
       Files.createDirectories(path);
   
